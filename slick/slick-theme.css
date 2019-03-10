@@ -1,0 +1,104 @@
+@charset 'UTF-8';
+/* Slider */
+.slick-loading .slick-list
+{
+    background: #fff url('./ajax-loader.gif') center center no-repeat;
+}
+
+/* Icons */
+@font-face
+{
+    font-family: 'slick';
+    font-weight: normal;
+    font-style: normal;
+    src: url('./fonts/slick.eot');
+    src: url('./fonts/slick.eot?#iefix') format('embedded-opentype'), url('./fonts/slick.woff') format('woff'), url('./fonts/slick.ttf') format('truetype'), url('./fonts/slick.svg#slick') format('svg');
+}
+/* Arrows */
+
+.slick-prev:active, .slick-next:active {box-shadow: 0 0 0 transparent;} /*   моё   */
+
+.slick-prev,
+.slick-next
+{
+    font-size: 0;
+    line-height: 0;
+    position: absolute;
+    top: 42%;
+    display: block;
+    padding: 0;
+    cursor: pointer;
+    color: transparent;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+.slick-prev:hover:before,
+.slick-next:hover:before
+{
+    opacity: 1;
+}
+.slick-prev.slick-disabled:before,
+.slick-next.slick-disabled:before
+{
+    opacity: .25;
+}
+
+.slick-prev:before,
+.slick-next:before
+{
+    font-family: 'slick';
+    font-size: 20px;
+    line-height: 1;
+    opacity: .75;
+    color: white;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.slick-prev
+{
+    left: -10%;
+    /*left: -85px;*/
+}
+[dir='rtl'] .slick-prev
+{
+    right: -25px;
+    left: auto;
+}
+.slick-prev:before
+{
+    content: '';
+    width: 52px;    /*менял стрелочки на нужные*/
+    height: 52px;    /*менял стрелочки на нужные*/
+    display: block;    /*менял стрелочки на нужные*/
+    background: url(../img/arrow_left.svg) no-repeat;    /*менял стрелочки на нужные*/
+}
+[dir='rtl'] .slick-prev:before
+{
+    content: '→';
+}
+
+.slick-next
+{
+    /*right: -85px;*/
+    right: -10%;
+}
+[dir='rtl'] .slick-next
+{
+    right: auto;
+    left: -55px;
+}
+.slick-next:before
+{
+    content: '';
+    width: 52px;    /*менял стрелочки на нужные*/
+    height: 52px;    /*менял стрелочки на нужные*/
+    display: block;    /*менял стрелочки на нужные*/
+    background: url(../img/arrow_right.svg) no-repeat;    /*менял стрелочки на нужные*/
+}
+[dir='rtl'] .slick-next:before
+{
+    content: '←';
+}
