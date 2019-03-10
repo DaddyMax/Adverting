@@ -53,7 +53,6 @@ header {
 }
 .wrap {
 	max-width: 1170px;
-	/*min-width: 960px;*/
 	width: 80%;
 	height: 50px;
 	margin: 0 auto;
@@ -172,14 +171,13 @@ header {
 	color: #fff;
 }
 .about_advantages .wrap {
-	justify-content: space-around;
+	justify-content: space-between;
 	height: 100%;
 	padding: 110px 0;
 	align-items: flex-start;
 }
 .advantage {
-	width: 255px;
-	width: 20%;
+	width: 23%;
 	text-align: center;
 }
 .icons {
@@ -275,6 +273,7 @@ header {
 	border-radius: 8px;
 	margin-bottom: 130px;
 	text-align: center;
+	position: relative;
 }
 
 .staff__photo {
@@ -310,6 +309,10 @@ header {
 	display: flex;
 	justify-content: center;
 	margin-top: 30px;
+	position: absolute;
+	bottom: 20px;
+	left: 0;
+	right: 0;
 }
 .socicon {
 	outline: none;
@@ -353,7 +356,7 @@ header {
 }
 .form__ipt {
 	width: 72%;
-	max-width: 550px;
+	max-width: 580px;
 	height: 60px;
 	border-top-left-radius: 30px;
 	border-bottom-left-radius: 30px;
@@ -366,7 +369,6 @@ header {
 }
 .form__btn {
 	width: 27.9%;
-	/*max-width: 220px;*/
 	height: 60px;
 	border-top-right-radius: 30px;
 	border-bottom-right-radius: 30px;
@@ -417,7 +419,7 @@ footer .wrap {
 		text-align: center;
 	}
 	.nav-responsible ul li a {
-		font-size: 1.3rem;
+		font-size: 1.5rem;
 	}
 	.sub_h1 {
 		font-size: 1.5rem;
@@ -447,6 +449,96 @@ footer .wrap {
 		font-size: 4.5rem;
 		padding-top: 60px;
 	}
+	.slider {
+		margin: 90px auto 90px auto;
+	}
+	.slide {
+		font-size: 4rem !important;
+	}
+	.slide img {
+		max-width: 80%;
+	}
+	.slide span {
+		font-size: 2rem !important;
+	}
+	.slick-prev	{
+	    left: 20% !important;
+	    bottom: -60% !important;
+	}
+	.slick-next	{
+	    right: 20% !important;
+	    bottom: -60% !important;
+	}
+	.about_advantages .wrap {
+		flex-direction: column;
+		padding: 60px 0;
+	}
+	.advantage {
+		width: 100% !important;
+		margin: 60px auto 0 auto;
+	}
+	.advantage:first-child {
+		margin-top: 0;
+	}
+	.advantage__caption {
+		font-size: 2.5rem;
+		margin-bottom: 10px;
+	}
+	.advantage__caption br {
+		display: none;
+	}
+	.service {
+		width: 95% !important;
+	}
+	.team .wrap {
+		flex-direction: column;
+	}
+	.staff {
+		width: 100% !important;
+		height: 100%;
+		padding-bottom: 20px;
+		margin: 0 auto 30px auto;
+	}
+	.signup__form {
+		width: 80%;
+	}
+	.form__ipt {
+		width: 100%;
+		border-bottom-left-radius: 0;
+		box-sizing: border-box;
+	}
+	.form__btn {
+		width: 100%;
+		border-top-right-radius: 0;
+		margin-left: 0;
+	}
+	.copyright br {
+		display: block;
+	}
+	.staff__socicons {
+		position: static !important;
+	}
+}
+
+@media (min-width: 481px) and (max-width: 749px) {
+	.service {
+		width: 70% !important;
+	}
+	.team .wrap {
+		flex-direction: column;
+	}
+	.staff {
+		width: 70% !important;
+		height: 100%;
+		padding-bottom: 20px;
+		margin: 0 auto 30px auto;
+	}
+	.staff__socicons {
+		position: static !important;
+	}
+}
+
+@media (max-width: 979px) {
 	.nav {
 		display: none;
 	}
@@ -478,72 +570,38 @@ footer .wrap {
 		margin: 0 9px;
 		transition: all .3s;
 	}
-	.slider {
-		margin: 90px auto 90px auto;
-	}
-	.slide {
-		font-size: 4rem;
-	}
-	.slide img {
-		max-width: 80%;
-	}
-	.slide span {
-		font-size: 2rem;
-	}
 	.slick-prev	{
 	    left: 20%;
-	    bottom: -60%;
+	    bottom: -80%;
 	}
 	.slick-next	{
 	    right: 20%;
-	    bottom: -60%;
+	    bottom: -80%;
+	}
+	.slide {
+		font-size: 4.5rem;
+	}
+	.slide span {
+		font-size: 2.3rem;
 	}
 	.about_advantages .wrap {
-		flex-direction: column;
-		padding: 60px 0;
+		flex-wrap: wrap;
+		justify-content: space-between;
 	}
 	.advantage {
-		width: 100%;
-		margin: 60px auto 0 auto;
+		width: 45%;
 	}
-	.advantage:first-child {
-		margin-top: 0;
-	}
-	.advantage__caption {
-		font-size: 2.5rem;
-		margin-bottom: 10px;
-	}
-	.advantage__caption br {
-		display: none;
-	}
-	.service {
-		width: 95%;
-	}
-	.team .wrap {
-		flex-direction: column;
-	}
-	.staff {
-		width: 100%;
-		height: 100%;
-		padding-bottom: 20px;
-		margin: 0 auto 30px auto;
-	}
-	.signup__form {
-		width: 80%;
-	}
-	.form__ipt {
-		width: 100%;
-		border-bottom-left-radius: 0;
-		box-sizing: border-box;
-	}
-	.form__btn {
-		width: 100%;
-		border-top-right-radius: 0;
-		margin-left: 0;
-	}
-	.copyright br {
-		display: block;
+	.advantage:nth-child(3),
+	.advantage:nth-child(4) {
+		margin-top: 50px;
 	}
 }
 
-@media (min-width: 768px) and (max-width: 979px) {}
+@media (max-width: 1090px) {
+	.service {
+		width: 35%;
+	}
+	.staff {
+		width: 33%;
+	}
+}
