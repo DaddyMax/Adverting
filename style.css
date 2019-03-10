@@ -68,6 +68,12 @@ header {
 	padding-left: 41px;
 	background: url(img/logo_bg.svg) no-repeat left center;
 }
+.nav {
+	display: block;
+}
+.nav-responsible {
+	display: none;
+}
 .nav ul li {
 	display: inline-block;
 }
@@ -193,7 +199,6 @@ header {
 .advIcon_4 {
 	background: url(img/about_icon_4.svg) no-repeat center center;
 }
-
 .advantage__caption {
 	font-size: 3rem;
 	font-weight: 600;
@@ -206,7 +211,7 @@ header {
 	margin-bottom: 60px;
 }
 .services .sub_h1 {
-	width: 500px;
+	max-width: 500px;
 }
 .services .wrap {
 	flex-wrap: wrap;
@@ -228,7 +233,6 @@ header {
 	color: #aaa;
 	font-size: 1.4rem;
 }
-
 .servIcon_1 {
 	background: url(img/services_icon_1.svg) no-repeat left 8px;	
 }
@@ -260,7 +264,7 @@ header {
 	padding-top: 80px;
 }
 .team .sub_h1 {
-	width: 550px;
+	max-width: 550px;
 	color: #000;
 	margin: 30px auto 70px auto;
 }
@@ -339,14 +343,17 @@ header {
 } 
 .signup .sub_h1 {
 	color: #fff;
-	width: 584px;
+	max-width: 584px;
 }
 .signup__form {
 	margin: 0 auto 120px auto;
-	width: 800px;
+	width: 100%;
+	max-width: 800px;
+	box-sizing: border-box;
 }
 .form__ipt {
-	width: 550px;
+	width: 72%;
+	max-width: 550px;
 	height: 60px;
 	border-top-left-radius: 30px;
 	border-bottom-left-radius: 30px;
@@ -355,21 +362,24 @@ header {
 	padding-left: 25px;
 	color: #000;
     font-size: 1.8rem;
+    box-sizing: border-box;
 }
 .form__btn {
-	width: 220px;
-	height: 62px;
+	width: 27.9%;
+	/*max-width: 220px;*/
+	height: 60px;
 	border-top-right-radius: 30px;
 	border-bottom-right-radius: 30px;
 	border: none;
 	outline: none;
-	margin-left: -2px;
+	margin-left: -3px;
 	cursor: pointer;
 	background-color: #ffc000;
 	color: #fff;
 	text-transform: uppercase;
 	font-size: 1.8rem;
 	padding-bottom: 1px;
+	box-sizing: border-box;
 }
 footer {
 	height: 80px;
@@ -382,6 +392,9 @@ footer .wrap {
 .copyright {
 	font-size: 1.4rem;
 }
+.copyright br {
+	display: none;
+}
 .footer__socicons {
 	-webkit-filter: grayscale(100%);
 	-moz-filter: grayscale(100%);
@@ -393,3 +406,144 @@ footer .wrap {
 	display: flex;
 	justify-content: space-between;
 }
+
+
+@media (max-width: 399px) {
+	.call_btn {
+		display: none;
+	}
+	.nav-responsible ul {
+		padding-left: 0;
+		text-align: center;
+	}
+	.nav-responsible ul li a {
+		font-size: 1.3rem;
+	}
+	.sub_h1 {
+		font-size: 1.5rem;
+	}
+	header {
+		height: 50px;
+	}
+	.nav-responsible ul {
+		line-height: 35px !important;
+		top: 40px !important;
+	}
+	.service {
+		width: 95%;
+		padding-left: 0;
+	}
+	.service__caption {
+		margin-left: 80px;
+		margin-bottom: 40px;
+	}
+	.signup__form {
+		width: 90% !important;
+	}
+}
+
+@media (max-width: 480px) {
+	h1 { 
+		font-size: 4.5rem;
+		padding-top: 60px;
+	}
+	.nav {
+		display: none;
+	}
+	.nav-responsible {
+		display: block;
+	}
+	header .wrap {
+		position: relative;
+		width: 100%;
+		padding: 0 10%;
+	}
+	.nav-responsible ul {
+		position: absolute;
+		top: 55px;
+		left: 0;
+		width: 100%;
+		text-align: center;
+		line-height: 45px;
+		background-color: #333;
+		padding-left: 0;
+	}
+	.nav-responsible ul li {
+		display: inline-block;
+	}
+	.nav-responsible a {
+		text-decoration: none;
+		color: #fff;
+		font-size: 1.9rem;
+		margin: 0 9px;
+		transition: all .3s;
+	}
+	.slider {
+		margin: 90px auto 90px auto;
+	}
+	.slide {
+		font-size: 4rem;
+	}
+	.slide img {
+		max-width: 80%;
+	}
+	.slide span {
+		font-size: 2rem;
+	}
+	.slick-prev	{
+	    left: 20%;
+	    bottom: -60%;
+	}
+	.slick-next	{
+	    right: 20%;
+	    bottom: -60%;
+	}
+	.about_advantages .wrap {
+		flex-direction: column;
+		padding: 60px 0;
+	}
+	.advantage {
+		width: 100%;
+		margin: 60px auto 0 auto;
+	}
+	.advantage:first-child {
+		margin-top: 0;
+	}
+	.advantage__caption {
+		font-size: 2.5rem;
+		margin-bottom: 10px;
+	}
+	.advantage__caption br {
+		display: none;
+	}
+	.service {
+		width: 95%;
+	}
+	.team .wrap {
+		flex-direction: column;
+	}
+	.staff {
+		width: 100%;
+		height: 100%;
+		padding-bottom: 20px;
+		margin: 0 auto 30px auto;
+	}
+	.signup__form {
+		width: 80%;
+	}
+	.form__ipt {
+		width: 100%;
+		border-bottom-left-radius: 0;
+		box-sizing: border-box;
+	}
+	.form__btn {
+		width: 100%;
+		border-top-right-radius: 0;
+		margin-left: 0;
+	}
+	.copyright br {
+		display: block;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 979px) {}
