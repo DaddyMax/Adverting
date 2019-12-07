@@ -377,6 +377,7 @@ header {
 .signup {
 	background-color: #000;
 	height: 100%;
+	padding-bottom: 120px;
 }
 .signup h1 {
 	color: #fff;
@@ -392,7 +393,7 @@ header {
 	max-width: 584px;
 }
 .signup__form {
-	margin: 0 auto 120px auto;
+	margin: 0 auto 0 auto;
 	width: 100%;
 	max-width: 800px;
 	-webkit-box-sizing: border-box;
